@@ -30,5 +30,5 @@ ATTRS{idVendor}=="0483" ATTRS{idProduct}=="5740", ENV{ID_MM_DEVICE_IGNORE}="1", 
 ```bash
 ATTRS{idVendor}=="0483" ATTRS{idProduct}=="5740", ENV{ID_MM_DEVICE_IGNORE}="1", MODE:="0666, SYMLINK+="ttyOpenCR"
 ```
-This is done to prvent collision of port names with Arduino board or other devices connected to the robot over serial connectiion. In addtion to *turtlebot3_core*, the *sherlock_bringup.launch* file launches the driver for LiDAR sensor and diagnostics node;
+This is done to prevent collision of port names with Arduino board or other devices connected to the robot over serial connectiion. In addtion to *turtlebot3_core*, the *sherlock_bringup.launch* file launches the driver for LiDAR sensor and diagnostics node;
 - **sherlock_state_publisher.launch**: the static publisher of frame transformations. The transformations are published at the rate that is passed as parameter. The transformations themselves are calcualted based on the URDF description of the TurtBot3 Burger model (i.e., description of its links and joints), which is also passed as an argument.
